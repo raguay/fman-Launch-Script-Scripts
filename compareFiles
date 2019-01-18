@@ -1,0 +1,16 @@
+#!/usr/local/bin/zsh
+
+#
+# The following variable are usable:
+#
+# $FILES_SELECTED - The currently selected file
+# $LEFT_PANE - The directory of the left pane
+# $RIGHT_PANE - The directory of the right pane
+# $CURRENT_DIRECTORY - The currently selected directory
+# $LEFT_PANE_SELECTED_FILE - The currently selected file in the left pane
+# $RIGHT_PANE_SELECTED_FILE - The currently selected file in the right pane
+
+#
+# This script launches DeltaWalker on the two selected files in each panel.
+#
+/Applications/DeltaWalker.app/Contents/MacOS/DeltaWalker "${LEFT_PANE_SELECTED_FILE}" "${RIGHT_PANE_SELECTED_FILE}"

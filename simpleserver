@@ -1,0 +1,24 @@
+#!/usr/local/bin/zsh
+
+#
+# The following variable are usable:
+#
+# $FILES_SELECTED - The currently selected file
+# $LEFT_PANE - The directory of the left pane
+# $RIGHT_PANE - The directory of the right pane
+# $CURRENT_DIRECTORY - The currently selected directory
+# $LEFT_PANE_SELECTED_FILE - The currently selected file in the left pane
+# $RIGHT_PANE_SELECTED_FILE - The currently selected file in the right pane
+
+#
+# This script will go to the current directory in fman and launch a python
+# server on port 8000 of the localhost. It stores the pid for the server in
+# ~/.serverpid. That is used by the `killserver` script to stop the server. You
+# might need to adjust the location of the python interpreter.
+#
+cd "$CURRENT_DIRECTORY"
+/usr/local/bin/python3 -m http.server 8000 &!
+echo $! > ~/.serverpid
+spid=`cat ~/.serverpid`
+disown $spid
+exit 0
