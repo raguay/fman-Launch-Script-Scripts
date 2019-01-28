@@ -10,6 +10,7 @@ Have fun!
 
 This is a description for each script in this repository. The two scripts, `compareDir` and `compareFiles` uses the [DeltaWalker](https://www.deltawalker.com/) program to do the comparisons. If you want to use a different program, then change the script to fit your needs.
 
+| Script | Description |
 |---|-----|
 | compareDir | This script will compare the two directories of each panel. |
 | compareFiles | This script will compare the two files that the cursor is on in each panel. |
